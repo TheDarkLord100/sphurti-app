@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
+import 'package:sphurti_app/screens/navigation_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      home: NavBarScreen(),
+    );
   }
 }
