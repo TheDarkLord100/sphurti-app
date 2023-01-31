@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "331139649234",
+    "project_id": "sphurti-dit",
+    "storage_bucket": "sphurti-dit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331139649234:android:a643c9c5b14c23d339e70b",
+        "android_client_info": {
+          "package_name": "com.example.sphurti_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331139649234-9t04nnjmpvqh5kf7jpjr339v86rtrbbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdCtVxIN0eY8OjmYAdMU3zsuPr0eoHMHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331139649234-9t04nnjmpvqh5kf7jpjr339v86rtrbbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
