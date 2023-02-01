@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:sphurti_app/models/contact.dart';
+import 'package:sphurti_app/models/guidelines.dart';
 import 'package:sphurti_app/models/sports_model.dart';
 
 class ApiClient {
@@ -47,7 +49,38 @@ class ApiClient {
         .doc('guidelines')
         .get()
         .then((DocumentSnapshot documentSnapshot) {
-      log(documentSnapshot.data().toString());
+      Guidelines.generalGuidelines =
+          Guidelines.fromList(documentSnapshot['guidelines']);
     });
+  }
+
+  Future<void> getContactDetails() async {
+    await FirebaseFirestore.instance
+        .collection('contact')
+        .doc('faculty_contact')
+        .get()
+        .then((DocumentSnapshot doc) {
+      log(doc.data().toString());
+      Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+      for (Map<String, dynamic> element in data['faculty_contact']) {
+        Contact.facultyContact.add(Contact.fromMap(element));
+      }
+    });
+
+    await FirebaseFirestore.instance
+        .collection('contact')
+        .doc('student_contact')
+        .get()
+        .then((DocumentSnapshot doc) {
+      log(doc.data().toString());
+      Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+      for (Map<String, dynamic> element in data['student_contact']) {
+        Contact.studentContact.add(Contact.fromMap(element));
+      }
+    });
+
+    log(Contact.facultyContact.toString());
+    log(Contact.studentContact.toString());
+
   }
 }
