@@ -4,8 +4,8 @@ class Contact {
   final String name;
   final String designation;
 
-  static late List<Contact> facultyContact;
-  static late List<Contact> studentContact;
+  static List<Contact> facultyContact = [];
+  static List<Contact> studentContact = [];
 
   Contact(
       {required this.name,
