@@ -1,7 +1,5 @@
-import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:sphurti_app/services/sports_model.dart';
+import 'package:sphurti_app/models/sports_model.dart';
 
 class ApiClient {
   Future<void> getSportsData() async {
@@ -14,14 +12,30 @@ class ApiClient {
         .then((DocumentSnapshot snap) {
       result = snap.data() as Map<String, dynamic>;
       sportsData = result['details'];
-      log(sportsData.toString());
     });
 
-    final List<SportsModel> sportsList = [];
-
     for (Map<String, dynamic> element in sportsData) {
-      sportsList.add(SportsModel.fromMap(element));
+      SportsModel model = SportsModel.fromMap(element);
+      switch (model.sport) {
+        case 'cricket':
+          SportsModel.cricket = model;
+          break;
+        case 'football':
+          SportsModel.football = model;
+          break;
+        case 'basketball':
+          SportsModel.basketball = model;
+          break;
+        case 'badminton':
+          SportsModel.badminton = model;
+          break;
+        case 'volleyball':
+          SportsModel.volleyball = model;
+          break;
+        case 'table Tennis':
+          SportsModel.tableTennis = model;
+          break;
+      }
     }
-    log(sportsList.toString());
   }
 }

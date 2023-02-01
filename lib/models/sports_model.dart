@@ -10,6 +10,13 @@ class SportsModel {
   final int registrationFees;
   final List<SportsCoordinators> coordinators;
 
+  static late final SportsModel cricket;
+  static late final SportsModel football;
+  static late final SportsModel badminton;
+  static late final SportsModel volleyball;
+  static late final SportsModel basketball;
+  static late final SportsModel tableTennis;
+
   SportsModel(
       {required this.sport,
       required this.schedule,
