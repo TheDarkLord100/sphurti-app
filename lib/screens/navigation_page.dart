@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sphurti_app/screens/contact_screen.dart';
-import 'package:sphurti_app/screens/home_screen.dart';
-import 'package:sphurti_app/screens/live_result_screen.dart';
-import 'package:sphurti_app/screens/sports_screen.dart';
+import 'package:sphurti_app/screens/contacts.dart';
+import 'package:sphurti_app/screens/home.dart';
+import 'package:sphurti_app/screens/live_result.dart';
+import 'package:sphurti_app/screens/sports.dart';
 
 class NavBarScreen extends StatefulWidget {
   const NavBarScreen({super.key});
@@ -29,9 +29,10 @@ class _NavBarScreenState extends State<NavBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: lists.elementAt(_selectedIndex),
-      
+
       resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
+        
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined), label: 'Home'),
@@ -41,6 +42,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
               icon: Icon(Icons.live_tv_outlined), label: 'Live Result'),
           BottomNavigationBarItem(
               icon: Icon(Icons.contact_page_outlined), label: 'Contacts'),
+
         ],
         iconSize: 28,
         selectedItemColor: Colors.red,
