@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sphurti_app/models/sports_model.dart';
 
@@ -37,5 +39,15 @@ class ApiClient {
           break;
       }
     }
+  }
+
+  Future<void> getGeneralGuidelines() async {
+    await FirebaseFirestore.instance
+        .collection('sports')
+        .doc('guidelines')
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      log(documentSnapshot.data().toString());
+    });
   }
 }
