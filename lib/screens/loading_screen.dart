@@ -9,6 +9,7 @@ class LoadingScreen extends StatelessWidget {
     final ApiClient api = ApiClient();
     await api.getSportsData();
     await api.getGeneralGuidelines();
+    await api.getContactDetails();
     //ignore:use_build_context_synchronously
     Navigator.pushAndRemoveUntil(
         context,
