@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sphurti_app/screens/contact_screen.dart';
 import 'package:sphurti_app/screens/home_screen.dart';
 import 'package:sphurti_app/screens/live_result_screen.dart';
-import 'package:sphurti_app/screens/sports_screen.dart';
+import 'package:sphurti_app/screens/all_sports_screen.dart';
 
 class NavBarScreen extends StatefulWidget {
   const NavBarScreen({super.key});
