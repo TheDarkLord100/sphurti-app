@@ -30,7 +30,8 @@ class SportsScreen extends StatelessWidget {
         itemCount: 6,
         itemBuilder: (context, index) {
           return Stack(
-            children: [Container(
+            children: [
+              Container(
               margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               child: Image.asset(
                 sportsImages[index],
