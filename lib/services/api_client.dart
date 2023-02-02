@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sphurti_app/models/contact.dart';
 import 'package:sphurti_app/models/guidelines.dart';
+import 'package:sphurti_app/models/invite_message.dart';
 import 'package:sphurti_app/models/sports_model.dart';
 
 class ApiClient {
@@ -60,7 +61,6 @@ class ApiClient {
         .doc('faculty_contact')
         .get()
         .then((DocumentSnapshot doc) {
-      log(doc.data().toString());
       Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
       for (Map<String, dynamic> element in data['faculty_contact']) {
         Contact.facultyContact.add(Contact.fromMap(element));
@@ -72,15 +72,32 @@ class ApiClient {
         .doc('student_contact')
         .get()
         .then((DocumentSnapshot doc) {
-      log(doc.data().toString());
       Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
       for (Map<String, dynamic> element in data['student_contact']) {
         Contact.studentContact.add(Contact.fromMap(element));
       }
     });
 
-    log(Contact.facultyContact.toString());
-    log(Contact.studentContact.toString());
+    // log(Contact.facultyContact.toString());
+    // log(Contact.studentContact.toString());
+  }
 
+  Future<void> getInviteDetails() async {
+    await FirebaseFirestore.instance
+        .collection('contact')
+        .doc('message')
+        .get()
+        .then((DocumentSnapshot doc) {
+          var result = doc.data() as Map<String, dynamic>;
+          List<dynamic> data = result['faculty_message'] as List<dynamic>;
+          // log(data.toString());
+          print('dsfv');
+          print(data.toString());
+          List<InviteMessage> list = [];
+          for(Map<String, dynamic> element in data){
+            list.add(InviteMessage.fromMap(element));
+          }
+          InviteMessage.messageList = list;
+    });
   }
 }
