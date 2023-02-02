@@ -6,7 +6,7 @@ class SportsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> _sportsImages = [
+    final List<String> sportsImages = [
       'Assets/images/basketball.png',
       'Assets/images/badminton.png',
       'Assets/images/cricket.png',
@@ -33,7 +33,7 @@ class SportsScreen extends StatelessWidget {
             children: [Container(
               margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               child: Image.asset(
-                _sportsImages[index],
+                sportsImages[index],
                 fit: BoxFit.cover,
                 color: Colors.black45,
                 colorBlendMode: BlendMode.darken,
