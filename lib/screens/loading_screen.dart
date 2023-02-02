@@ -2,27 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:sphurti_app/screens/navigation_screen.dart';
 import 'package:sphurti_app/services/api_client.dart';
 
-class LoadingScreen extends StatelessWidget {
+class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
 
-  void loadData(BuildContext context) async {
+  @override
+  State<LoadingScreen> createState() => _LoadingScreenState();
+}
+
+class _LoadingScreenState extends State<LoadingScreen> {
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    loadData();
+    super.initState();
+  }
+
+  void loadData() async {
     final ApiClient api = ApiClient();
     await api.getSportsData();
     await api.getGeneralGuidelines();
     await api.getContactDetails();
     await api.getInviteDetails();
-    //ignore:use_build_context_synchronously
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => const NavBarScreen()),
-        (route) => false);
+    setState(() {
+      isLoading = false;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    loadData(context);
-    return const Center(
-      child: CircularProgressIndicator(),
-    );
+    return (isLoading) ? const Center(child: CircularProgressIndicator()) : const NavBarScreen();
   }
 }
