@@ -91,8 +91,6 @@ class ApiClient {
           var result = doc.data() as Map<String, dynamic>;
           List<dynamic> data = result['faculty_message'] as List<dynamic>;
           // log(data.toString());
-          print('dsfv');
-          print(data.toString());
           List<InviteMessage> list = [];
           for(Map<String, dynamic> element in data){
             list.add(InviteMessage.fromMap(element));
