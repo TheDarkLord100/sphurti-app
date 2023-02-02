@@ -29,7 +29,6 @@ class _NavBarScreenState extends State<NavBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: lists.elementAt(_selectedIndex),
-      
       resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
         items: const [
