@@ -22,149 +22,327 @@ class ContactScreen extends StatelessWidget {
     //   SportsModel.volleyball,
     // ];
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text("CONTACTUS"),
+        centerTitle: true,
+        title: Text("CONTACT US"),
+        backgroundColor: Colors.transparent,
       ),
       body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "Faculty:",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+        child: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("Assets/images/Contact_BG.png"),
+                fit: BoxFit.cover),
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 135,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/football.png',
-                        width: 200,
-                        height: 150,
-                      ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
+                Text(
+                  "Faculty:",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/table_tennis.jpg',
-                        width: 180,
-                        height: 150,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/football.png',
-                        width: 200,
-                        height: 150,
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/table_tennis.jpg',
-                        width: 180,
-                        height: 150,
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "Student Coordinators",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/football.png',
-                        width: 200,
-                        height: 150,
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/table_tennis.jpg',
-                        width: 180,
-                        height: 150,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/football.png',
-                        width: 200,
-                        height: 150,
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'Assets/images/table_tennis.jpg',
-                        width: 180,
-                        height: 150,
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
                       ),
-                      Text("RS Chauhan"),
-                      Text("7031341194")
-                    ],
-                  )
-                ],
-              ),
-            ],
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "Student Coordinators",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
+                      ),
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
+                      ),
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 25.0,
+                          ),
+                        ],
+                      ),
+                      width: 170,
+                      margin: const EdgeInsets.all(13),
+                      height: 202,
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'Assets/images/football.png',
+                          ),
+                          Text(
+                            "RS Chauhan",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "7031341194",
+                            style: TextStyle(
+                                backgroundColor: Colors.black,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
