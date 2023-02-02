@@ -29,8 +29,8 @@ class SportsScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: 6,
         itemBuilder: (context, index) {
-          return Stack(
-            children: [Container(
+          return Stack(children: [
+            Container(
               margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               child: Image.asset(
                 sportsImages[index],
@@ -40,8 +40,8 @@ class SportsScreen extends StatelessWidget {
                 height: 250,
                 width: MediaQuery.of(context).size.width,
               ),
-            ),]
-          );
+            ),
+          ]);
         },
       ),
     );
