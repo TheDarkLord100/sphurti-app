@@ -5,7 +5,7 @@ class LiveResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundContainer(
+    return backgroundContainer(
       context,
       backgroundPath: 'Assets/background/background_2.png',
       child: const Center(

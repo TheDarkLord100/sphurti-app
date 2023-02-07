@@ -24,6 +24,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     await api.getGeneralGuidelines();
     await api.getContactDetails();
     await api.getInviteDetails();
+    await Future.delayed(const Duration(seconds: 2));
     setState(() {
       isLoading = false;
     });
@@ -31,6 +32,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return (isLoading) ? const Center(child: CircularProgressIndicator()) : const NavBarScreen();
+    return (isLoading) ? const Image(image: AssetImage('Assets/background/loading_splash.png'),
+    fit: BoxFit.fitWidth,) :
+    const NavBarScreen();
   }
 }
