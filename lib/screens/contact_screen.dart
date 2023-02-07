@@ -7,7 +7,8 @@ class ContactScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundContainer( context,
+    return backgroundContainer(
+      context,
       backgroundPath: 'Assets/background/background_1.png',
       child: ListView(children: [
         const SizedBox(
@@ -38,7 +39,16 @@ class ContactScreen extends StatelessWidget {
               color: Colors.black,
               child: Column(
                 children: [
-                  Image.network(currentContact.imageUrl),
+                  Image.network(currentContact.imageUrl,
+                      loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      return child;
+                    } else {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  }),
                   const SizedBox(
                     height: 5,
                   ),

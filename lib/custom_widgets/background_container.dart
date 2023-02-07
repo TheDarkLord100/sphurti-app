@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget BackgroundContainer(BuildContext context, {required Widget child, required String backgroundPath}) {
+Widget backgroundContainer(BuildContext context, {required Widget child, required String backgroundPath}) {
   return SingleChildScrollView(
     child: Container(
       width: MediaQuery.of(context).size.width,

@@ -9,6 +9,7 @@ class SportsModel {
   final String registrationLink;
   final int registrationFees;
   final List<SportsCoordinators> coordinators;
+  final String thumbnail;
 
   static late SportsModel cricket;
   static late SportsModel football;
@@ -25,7 +26,8 @@ class SportsModel {
       required this.prizeMoney,
       required this.registrationLink,
       required this.registrationFees,
-      required this.coordinators});
+      required this.coordinators,
+      required this.thumbnail,});
 
   static List<String> toList(List<dynamic> list) {
     List<String> newList = [];
@@ -48,7 +50,8 @@ class SportsModel {
         prizeMoney: map['prize_money'],
         registrationLink: map['registration_link'],
         registrationFees: map['registration_fees'],
-        coordinators: coordinators);
+        coordinators: coordinators,
+        thumbnail: map['thumbnail']);
   }
 }
 
